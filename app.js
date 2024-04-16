@@ -2,7 +2,7 @@
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', async () => {
         try {
-            const registration = await navigator.serviceWorker.register('/service-worker.js');
+            const registration = await navigator.serviceWorker.register('/pwa/service-worker.js');
             console.log('Service Worker registered:', registration);
         } catch (error) {
             console.error('Service Worker registration failed:', error);
@@ -17,7 +17,7 @@ function displayNotification() {
             if (permission === 'granted') {
                 const notification = new Notification('Hello from My PWA', {
                     body: 'This is a test notification from My PWA.',
-                    icon: '/notification-icon.png'
+                    icon: '/pwa/notification-icon.png'
                 });
             }
         });
